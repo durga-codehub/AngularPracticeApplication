@@ -1,0 +1,18 @@
+<p>crud operations demo </p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of data">
+            <td>{{d.name}}</td>
+            <td>{{d.id}}</td>
+            <td>{{d.city}}</td>
+        </tr>
+    </tbody>
+</table>

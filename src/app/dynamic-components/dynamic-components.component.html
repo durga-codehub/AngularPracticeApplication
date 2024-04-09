@@ -1,0 +1,6 @@
+<p>Dynamic component demo</p>
+
+<ng-container *ngComponentOutlet="myDynamicComponent"></ng-container>
+
+<button (click)="setComponent('home')">Home</button>
+<button (click)="setComponent('http')">HTTP</button>
