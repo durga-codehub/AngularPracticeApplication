@@ -24,7 +24,7 @@ postDataObj = {
 ngOnInit(): void {
   //Get operation
  
-  this.common.postUser(this.postDataObj).subscribe(d=>console.log(d))
+  this.common.postUser(this.postDataObj).subscribe(d=>console.log(d)) // it wont update this mock json, just to understand the post concept
   this.common.getUser().subscribe(d=>this.data = d)
 }
 }

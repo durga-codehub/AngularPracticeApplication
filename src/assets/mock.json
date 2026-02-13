@@ -1,18 +1,17 @@
 [
     {
-    "name":"Durga Kannan",
-    "id":12,
-    "city":"Chennai"
+        "name": "Durga Kannan",
+        "id": 12,
+        "city": "Chennai"
     },
     {
-        "name":"Tina",
-        "id":123,
-        "city":"Banglore"
-        },
-        {
-            "name":"Meena",
-            "id":112,
-            "city":"Kochin"
-            }
-
+        "name": "Tina",
+        "id": 123,
+        "city": "Banglore"
+    },
+    {
+        "name": "Meena",
+        "id": 112,
+        "city": "Kochin"
+    }
 ]

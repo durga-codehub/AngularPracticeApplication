@@ -1,7 +1,27 @@
 <p>Signal Demo</p>
+<ul> Three types of signals
+    <li>Writable signals</li>
+    <li>Computed signals</li>
+    <li>Effects</li>
+</ul>
+<br>
 
 Count:{{count()}}
 Double:{{double()}}
 
+<br>
+
 <button (click)="increment()">Increment</button>
 <button (click)="updateTofour()">Update to four</button>
+<br>
+
+<!-- Implementing basic use case of signals -->
+<label>Length:</label><input type = "number" min = "1" id="length" [(ngModel)]="length">
+<label>Width:</label><input  type = "number" min = "1" id="width" [(ngModel)]="width">
+<p>I am 'Area' without sinals {{area}}</p>
+<br>
+
+<p>--- with Signal ---</p>
+<label>Length :</label><input  type = "number" min = "1" id="signalLength" [ngModel]="signalLength()" (ngModelChange) ="signalLength.set($event)" >
+<label>Width:</label><input  type = "number" min = "1" id="signalWidth" [ngModel]="signalWidth()" (ngModelChange) ="signalWidth.set($event)" >
+<p>I am 'Area' with sinals {{areaWithSignal()}}</p>
