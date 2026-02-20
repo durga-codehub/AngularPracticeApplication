@@ -1,11 +1,23 @@
-<div>Highlight example
+
+<div class="component-container">
+<h3>Custom directive - Highlight example</h3>
+<div>
+    
     <p [appHighlight] = "color" defaultColor="violet" >Highlight me!</p>
     Green:<input type="radio" name="colors" (click)="changeColor('green')">
     Yellow:<input type="radio" name="colors" (click)="changeColor('yellow')">
     Cyan:<input type="radio" name="colors" (click)="changeColor('cyan')">
 
 </div>
-<div *ngIf="common.userRole !=='admin'">Conic gradient example
-    <input type="range" [(ngModel)]="rangeVal" (ngModelChange)="OnInputRangeChange()">
-    <div id="piechart"></div>
+</div>
+
+
+
+<div class="component-container" *ngIf="common.userRole !=='admin'">
+    <h3>Conic gradient example </h3>
+    <p>Note: This will not be visible for admin login</p>
+    <input type = "range" [(ngModel)]="rangeVal" (ngModelChange)="onInputChange()">
+    <div style="display: flex; justify-content: center;">
+<div id="piechart"></div>
+    </div>
 </div>

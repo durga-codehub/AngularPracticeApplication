@@ -1,8 +1,11 @@
+<div class="parent-container">
 <div class="main-container">
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-        <div>Login here!!!</div>
-<div><label>User Name:</label> <input type="text" [formControlName]="'userName'"></div>
-<div><label>Password:</label> <input type="password" [formControlName]="'password'"></div>
-<div class="btn-submit"><button type="submit">Login</button></div>
+        <h3 style="text-align: center; color: #bd48bd;">Login here!!!</h3>
+<div class="input-class"><label>User Name:</label> <input type="text" [formControlName]="'userName'"></div>
+<div class="input-class"><label>Password:</label> <input type="password" [formControlName]="'password'"></div>
+<div class="btn-submit"><button class="login-button" type="submit">Login</button></div>
     </form>
 </div>
+</div>
+

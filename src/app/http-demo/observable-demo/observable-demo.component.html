@@ -1,6 +1,31 @@
-<p>observable vs Subject demo</p>
-Observable:{{obsVal}}....{{obsVal2}}
-Subject:{{subjVal}}.....{{subjVal2}}
+<h3>observable vs Subject</h3>
+<div style="display: flex; justify-content: center;">
+<div style="margin-right: 20px;">
+<label title="Cold observable, unicast in nature">Observable: </label><span class="valueHolder">{{obsVal}}</span>....<span class="valueHolder">{{obsVal2}}</span>
+</div>
+<div style="margin-left: 20px;">
+<label title="Hot observable, multicast in nature">Subject: </label><span class="valueHolder">{{subjVal}}</span>.....<span class="valueHolder">{{subjVal2}}</span>
+</div>
+</div>
 
-<button (click)="subscribeObs()">Subscribe Observable</button>
-<button (click)="subscribesubj()">Subscribe Observable</button>
+
+<div class="btn-container">
+    <button (click)="subscribeObs()">Subscribe Observable</button>
+<button (click)="subscribesubj()">Subscribe Subject</button>
+</div>
+
+<div class="subject-container">
+    <h4>Lets see how different types of subject works</h4>
+    <p>Note: Open console to see the emitted values</p>
+     <div style="margin-bottom: 15px;"><span style="text-shadow: 0 0 10px #d62bd7, 0 0 20px #895271, 0 0 30px rgb(148, 187, 233); font-weight: 600;">{{selectedSubName}}</span></div>
+    <div class="subject-btns">
+       <div style="border-right: 2px dashed #5e82c2" class="emit-div"><button (click)="onEmit(selectedSub)">Emit</button></div>
+<div class="subscribe-div"><button (click)="onSubscribe(selectedSub)">Subscribe</button></div>
+    </div>
+    <div class="subject-result">{{subjResult}}</div>
+    <div class="subject-btns">
+        <button (click)="subjectSelection(subjectExample,'Subject')">Subject</button>
+         <button (click)="subjectSelection(b_subjectExample,'Behaviour Subject')">Behaviour Subject</button>
+          <button (click)="subjectSelection(r_subjectExample,'Replay Subject')">Replay Subject</button>
+    </div>
+</div>

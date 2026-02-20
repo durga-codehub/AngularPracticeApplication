@@ -13,17 +13,18 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
   color:string =''
-  rangeVal:number =10;
+  rangeVal:number =10; 
 
   common = inject(SharedService)
 
-  
-  OnInputRangeChange(){
-let pieElem =document.getElementById('piechart')
-if(pieElem){
-  pieElem.style.backgroundImage = `conic-gradient(green ${this.rangeVal}%,lightgreen 0)`
-}
+  onInputChange(){
+    let pie = document.getElementById('piechart')
+    if(pie){
+pie.style.backgroundImage = `conic-gradient(green ${this.rangeVal}%,lightgreen 0)`
+    }
+     
   }
+
   changeColor(color:string){
     this.color=color
     

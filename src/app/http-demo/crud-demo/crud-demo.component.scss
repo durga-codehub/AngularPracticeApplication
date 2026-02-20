@@ -1,0 +1,14 @@
+td {
+    text-align: center;
+}
+
+.searchSpan {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    input {
+        background-color: #6d85f559;
+        border: 1px solid #3a89ef;
+    }
+}

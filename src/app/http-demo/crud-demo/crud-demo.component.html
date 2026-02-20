@@ -1,6 +1,9 @@
-<p>crud operations demo </p>
+<div style="display: flex; justify-content: center;">
+    <h3 style="text-align: center;">crud operations with search filter </h3>
+    <span class="searchSpan"><input placeholder="Search..." [(ngModel)] = "searchTxt"></span>
+</div>
 
-<table>
+<table style="margin-left: auto; margin-right: auto; width: 50%;">
     <thead>
         <tr>
             <th>Name</th>
@@ -9,10 +12,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let d of data">
+        <tr *ngFor="let d of data | filter : searchTxt">
             <td>{{d.name}}</td>
             <td>{{d.id}}</td>
             <td>{{d.city}}</td>
         </tr>
     </tbody>
 </table>
+<div style="text-align: center;">
+    <button (click)="updateData()">Update</button>
+</div>
