@@ -1,0 +1,11 @@
+<h3 style="text-align: center;">Debouncing</h3>
+<span style="text-align: center; display: block;">
+    <input placeholder="Search here..." [(ngModel)]="srchTxt" (keyup)="onSearch()">
+</span>
+<h3 style="text-align: center;">Throttling</h3>
+<div class="scroll_box_container">
+    <div class="scroll_Box" (scroll)="onScroll()"><span>Keep Scrolling...</span>
+        <div class="scroll_box_data">{{dummyTxt}}</div>
+    </div>
+</div>
+

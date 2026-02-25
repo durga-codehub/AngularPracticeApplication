@@ -1,0 +1,22 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    border: 2px solid #6d85f5;
+    margin-bottom: 20px;
+
+    .grid-box {
+        height: 50px;
+        width: 50px;
+        background: #bb73ae;
+        border: 3px solid #6d85f5;
+    }
+    .grid-box-selected{
+        background: #167eef;
+    }
+}

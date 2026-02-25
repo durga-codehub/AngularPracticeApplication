@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { HttpDemoComponent } from './http-demo/http-demo.component';
-import { canActivateGuardGuard } from './can-activate-guard.guard';
+import { canActivateGuard } from './can-activate-guard.guard';
 
 export const routes: Routes = [
     {
@@ -12,13 +11,13 @@ export const routes: Routes = [
     {
         path:'home',
         component:HomeComponent,
-        canActivate:[canActivateGuardGuard]
+        canActivate:[canActivateGuard]
     },
     {
         path:'http',
         //component:HttpDemoComponent, // eagerly Loaded
         loadComponent:()=> import('./http-demo/http-demo.component').then(c=>c.HttpDemoComponent), // Lazily loaded
-        canActivate:[canActivateGuardGuard],
+        canActivate:[canActivateGuard],
         children:[
             {
                 path:'loc',
@@ -27,26 +26,42 @@ export const routes: Routes = [
             {
                 path:'crud',
                 loadComponent:()=> import('./http-demo/crud-demo/crud-demo.component').then(c=>c.CrudDemoComponent),
-                canActivate:[canActivateGuardGuard]
+                canActivate:[canActivateGuard]
             },
             {
                 path:'interceptor',
                 loadComponent: ()=> import('./http-demo/interceptor-demo/interceptor-demo.component').then(c=>c.InterceptorDemoComponent),
-                canActivate:[canActivateGuardGuard]
+                canActivate:[canActivateGuard]
             },
             {
                 path:'observable',
                 loadComponent:()=>import('./http-demo/observable-demo/observable-demo.component').then(c=>c.ObservableDemoComponent),
-                canActivate:[canActivateGuardGuard]
+                canActivate:[canActivateGuard]
             },
             {
                 path:'rxjs',
                 loadComponent:()=>import('./http-demo/rxjs-demo/rxjs-demo.component').then(c=>c.RxjsDemoComponent),
-                canActivate:[canActivateGuardGuard]
+                canActivate:[canActivateGuard]
             },
             {
                 path:'signal',
-                loadComponent:()=>import('./http-demo/signal-demo/signal-demo.component').then(c=>c.SignalDemoComponent)
+                loadComponent:()=>import('./http-demo/signal-demo/signal-demo.component').then(c=>c.SignalDemoComponent),
+                canActivate:[canActivateGuard]
+            },
+            {
+              path: 'debouncing-throtling',
+              loadComponent:()=>import('./http-demo/debouncing-throtling/debouncing-throtling.component').then(c=>c.DebouncingThrotlingComponent),
+              canActivate:[canActivateGuard]
+            },
+            {
+                path:'router-params',
+                loadComponent:()=>import('./http-demo/router-params/router-params.component').then(c=>c.RouterParamsComponent),
+                canActivate:[canActivateGuard]
+            },
+            {
+                path:'event-delegation',
+                loadComponent:()=>import('./http-demo/event-delegation/event-delegation.component').then(c=>c.EventDelegationComponent),
+                canActivate:[canActivateGuard]
             },
             {
                 path:'',
@@ -58,7 +73,7 @@ export const routes: Routes = [
     {
         path:'dynamic_components',
        loadComponent:()=>import('./dynamic-components/dynamic-components.component').then(c=>c.DynamicComponentsComponent),
-       canActivate:[canActivateGuardGuard]
+       canActivate:[canActivateGuard]
         
     },
     {

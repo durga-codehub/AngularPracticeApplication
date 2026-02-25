@@ -1,0 +1,12 @@
+.scroll_box_container {
+    display: flex;
+    justify-content: center;
+
+    .scroll_Box {
+        text-align: center;
+        height: 250px;
+        width: 300px;
+        border: 3px solid #6d85f5;
+        overflow-y: scroll;
+    }
+}

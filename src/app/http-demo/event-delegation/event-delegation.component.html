@@ -1,0 +1,12 @@
+<h3 style="text-align: center;">Event Delegation</h3>
+<div style="text-align: center;" class="main-container">
+    <div (click)="gridClicked($event)"  id="grid-container" class="grid-container">
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+        <div class="grid-box"></div>
+    </div>
+    <div class="btn-container">
+        <button class="create-btn" (click)="createBox()">Create Box</button>
+        <button class="remove-btn" (click)="removeBox()">Remove Box</button>
+    </div>
+</div>
