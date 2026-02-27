@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from '../shared.service';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent implements OnInit, OnDestroy{
+export class LoginComponent implements OnInit{
 
   loginForm!:FormGroup
 common = inject(SharedService)
@@ -40,7 +40,5 @@ for(let i in credentials){
   }
 }
   }
-  ngOnDestroy(): void {
-    this.common.inLoginPage = false
-  }
+
 }

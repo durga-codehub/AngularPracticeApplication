@@ -1,0 +1,13 @@
+<h3>Course List</h3>
+<div class="cource-container" >
+    @for(course of courseData; track course.id){
+ <div [routerLink]="['/http/router-params/course-details',course.id ]" class="course-box">
+        <div class="course-header">{{course.name}}</div>
+        <div><label>ID: </label> <span>{{course.id}}</span></div>
+        <div><label>Price: </label> <span>{{course.price}}</span></div>
+    </div>
+    }
+    @empty{
+        <div class="course-box">There are no items to display</div>
+    }
+</div>
